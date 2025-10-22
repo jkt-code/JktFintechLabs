@@ -43,6 +43,19 @@
             animation: pulse 8s ease-in-out infinite;
         }
 
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('outline map of Africa.png');
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 1;
+            pointer-events: none;
+        }
+
         @keyframes pulse {
             0%, 100% {
                 opacity: 0.5;
@@ -53,9 +66,11 @@
         }
 
         .hero-content {
+            position: relative;
             text-align: center;
             z-index: 2;
             padding: 2rem;
+            color: #f3f3f3;
         }
 
         .company-name {
@@ -103,17 +118,21 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.1);
+            backdrop-filter: blur(2px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #22c55e, #f97316);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            width: 50px;
+            height: auto;
+        }
+
+        .logo img {
+            width: 50%;
+            height: auto;
+            display: block;
         }
 
         .nav-links {
@@ -747,7 +766,9 @@
 </head>
 <body>
     <nav>
-        <div class="logo">JKT</div>
+        <div class="logo">
+            <img src="JKTLogo.png" alt="JKT" />
+        </div>
         <ul class="nav-links">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
